@@ -60,10 +60,10 @@ For each SV in training data:
 │
 └─ Step 5: Final labeling
     ├─ If found in any of HG00733/HG00514/NA19240
-    │   └─ Label: True (SV from contaminating sample)
+    │   └─ Label: True
     │
     └─ If not found in any sample
-        └─ Label: False (potential false positive)
+        └─ Label: False
 ```
 
 
@@ -77,11 +77,10 @@ For HG00733, HG00514, and NA19240, an SV is considered a match **only if**:
 1. Reciprocal overlap ≥ 50%, **AND**
 2. The reference SV's label column = `True`
 
-This ensures only high-confidence variants from these samples are used for matching.
 
 ### Rule 3: Label Assignment
-- **True**: SV originates from contaminating samples (HG00733/HG00514/NA19240)
-- **False**: SV originates from HG002 or is not found in any reference (potential false positive)
+- **True**: SV originates from other samples (HG00733/HG00514/NA19240)
+- **False**: SV originates from HG002 or is not found in any reference samples
 
 
 ## Results
@@ -100,7 +99,7 @@ This ensures only high-confidence variants from these samples are used for match
 
 **Overall Distribution**
 - Total SVs: 16,529
-- **True** (from contaminating samples): 1,190 (7.20%)
+- **True** (from other samples): 1,190 (7.20%)
 - **False** (from HG002 or not found): 15,339 (92.80%)
 
 **Detailed Label Distribution**
