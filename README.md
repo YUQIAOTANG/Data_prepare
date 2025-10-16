@@ -1,9 +1,4 @@
-# Structural Variant (SV) Labeling Methodology
-
-## Overview
-
-This document describes the labeling process for deletion (DEL) type structural variants in mixed-sample sequencing data. The goal is to identify SVs originating from contaminating samples (HG00733, HG00514, NA19240) versus the primary sample (HG002).
-
+# Labeling Methodology
 
 ## Data Sources
 
